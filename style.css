@@ -1,13 +1,28 @@
 html {
-    background-image: url('img.jpg');
+    background-color: #0a0e1a;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(0, 105, 217, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(123, 47, 190, 0.30), transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(0, 180, 160, 0.22), transparent 50%),
+        linear-gradient(160deg, #0a0e1a 0%, #111a2e 45%, #0a0e1a 100%);
+    background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
     background-position: center;
-    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: #24272b;
     color: white;
     text-align: center;
     overflow: hidden;
+    animation: bgshift 24s ease-in-out infinite;
+}
+
+@keyframes bgshift {
+    0%   { background-position: 0% 0%, 100% 0%, 50% 100%, center; }
+    50%  { background-position: 100% 50%, 0% 50%, 50% 0%, center; }
+    100% { background-position: 0% 0%, 100% 0%, 50% 100%, center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { animation: none; }
 }
 
 h1 {
