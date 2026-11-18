@@ -1,106 +1,37 @@
-html {
-    background-color: #0a0e1a;
-    background-image:
-        radial-gradient(circle at 20% 20%, rgba(0, 105, 217, 0.35), transparent 45%),
-        radial-gradient(circle at 80% 30%, rgba(123, 47, 190, 0.30), transparent 45%),
-        radial-gradient(circle at 50% 90%, rgba(0, 180, 160, 0.22), transparent 50%),
-        linear-gradient(160deg, #0a0e1a 0%, #111a2e 45%, #0a0e1a 100%);
-    background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    animation: bgshift 24s ease-in-out infinite;
-}
-
-@keyframes bgshift {
-    0%   { background-position: 0% 0%, 100% 0%, 50% 100%, center; }
-    50%  { background-position: 100% 50%, 0% 50%, 50% 0%, center; }
-    100% { background-position: 0% 0%, 100% 0%, 50% 100%, center; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html { animation: none; }
-}
-
-h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-size: 25px;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-#progress {
-    display: block;
-}
-
-#menu {
-    display: block;
-}
-
-#crypto {
-    display: none;
-}
-
-#tools {
-    display: none;
-}
-
-#lnx {
-    display: none;
-}
-
-#mods {
-    display: none;
-}
-
-.btn {
-    background-color: #003263;
-    color: white;
-    width: 227px;
-    height: 46px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.btn:hover {
-    background-color: #0069d9;
-}
-
-.btn-onln {
-    background-color: #076300;
-}
-
-.btn-onln:hover {
-    background-color: #18891b;
-}
-
-.btn-toolbox {
-    background-color: #ae2301;
-}
-
-.btn-toolbox:hover {
-    background-color: #d42a01;
-}
-
-.btn-multi {
-    background-color: #b8860b;
-}
-
-.btn-multi:hover {
-    background-color: #daa520;
-}
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #161624 url('assets/vice-sunset.svg') center center / cover fixed no-repeat; color: #fff1ed; text-align: center; }
+body { margin: 0; min-height: 100vh; padding: 26px 6vw; background: linear-gradient(180deg, rgba(22,19,39,.18), rgba(22,19,39,.5) 45%, #161624 100%); font-family: 'Trebuchet MS', sans-serif; }
+a { color: inherit; text-decoration: none; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 24px; border-bottom: 1px solid rgba(255,230,233,.25); text-align: left; }
+.wordmark { font-size: 22px; font-weight: 900; letter-spacing: -.8px; }
+.wordmark span { color: #ffadcc; margin-left: 5px; }
+.edition, .eyebrow, .vi-caption, .site-footer { font-size: 11px; letter-spacing: 2.5px; font-weight: bold; }
+.hero { max-width: 1120px; margin: 40px auto 34px; display: flex; align-items: center; justify-content: space-between; text-align: left; gap: 40px; }
+.eyebrow { color: #ffbfd3; margin: 0 0 18px; }
+.hero h2 { font: italic 900 76px/.94 Impact, 'Arial Narrow', sans-serif; letter-spacing: -1px; margin: 0; text-shadow: 3px 4px 0 #673953; }
+.hero-description { max-width: 340px; font-size: 15px; line-height: 1.7; color: #f4dfe5; }
+.vi-mark { flex: 0 0 290px; text-align: center; transform: rotate(-4deg); }
+.gta-name { display: block; font: 900 28px/.9 Impact, sans-serif; letter-spacing: -1px; color: #fff4e9; text-shadow: 2px 2px #45243e; }
+.vi-number { display: block; font: 900 210px/.96 Georgia, serif; letter-spacing: -20px; color: #ffbdd1; text-shadow: 4px 5px 0 #a85d89, 8px 9px 0 #43334f; }
+.vi-caption { display: block; margin-top: 14px; color: #ffe2c0; }
+.host-panel { max-width: 1120px; margin: auto; padding: 30px 24px; border: 1px solid #8b667d; border-radius: 16px; background: rgba(24,22,40,.92); box-shadow: 0 20px 60px rgba(18,13,30,.3); }
+h1 { font-size: 20px; line-height: 1.5; color: #fff1ed; overflow-wrap: break-word; }
+#msgs { min-height: 30px; margin: 0 0 18px; }
+hr { border: 0; border-top: 1px solid #59445d; }
+.section-label { font-size: 14px; color: #e8bdcf; font-weight: normal; margin-bottom: 20px; }
+#progress, #menu { display: block; }
+#crypto, #tools, #lnx, #mods { display: none; }
+.btn { background: #393047; color: #fff1ed; width: 227px; max-width: 100%; min-height: 50px; padding: 12px; font: bold 15px 'Trebuchet MS', sans-serif; margin: 7px 5px; border: 1px solid #806279; border-radius: 5px; cursor: pointer; transition: transform .18s, background-color .18s, border-color .18s; }
+.btn:hover, .btn:focus { background: #76506b; border-color: #ffd0de; transform: translateY(-3px); outline: 2px solid #ffd0de; outline-offset: 3px; }
+.btn:active { transform: translateY(0); }
+.btn-multi { background: #f3a2bf; border-color: #ffc9d5; color: #2a2037; }
+.btn-multi:hover, .btn-multi:focus { background: #ffd0df; }
+.btn-onln { background: #273c42; border-color: #779997; color: #c5ece4; width: auto; }
+.btn-onln:hover { background: #3c5c60; }
+.btn-toolbox { background: #714453; }
+.credits { margin: 24px 0 0; font-size: 12px; font-weight: normal; color: #c8b4c8; }
+.site-footer { max-width: 1120px; margin: 24px auto 0; display: flex; justify-content: space-between; gap: 15px; color: #c3a6bc; font-size: 9px; }
+#crypto img { border: 8px solid #fff; border-radius: 8px; }
+@media (max-width: 700px) { body { padding: 20px 5vw; } .edition { font-size: 8px; letter-spacing: 1px; max-width: 120px; text-align: right; } .hero { gap: 12px; margin: 32px auto; } .hero h2 { font-size: 48px; } .hero-description { font-size: 12px; } .hero .eyebrow { font-size: 9px; letter-spacing: 1px; } .vi-mark { flex-basis: 125px; } .gta-name { font-size: 17px; } .vi-number { font-size: 110px; letter-spacing: -12px; } .vi-caption { font-size: 8px; letter-spacing: 1px; } .host-panel { padding: 24px 14px; } .btn { width: 100%; margin: 7px 0; } #msgs { font-size: 17px; } .site-footer { font-size: 8px; letter-spacing: 1px; } }
+@media (max-width: 380px) { .hero h2 { font-size: 38px; } .vi-mark { flex-basis: 100px; } .vi-number { font-size: 88px; } }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover, .btn:focus { transform: none; } }
